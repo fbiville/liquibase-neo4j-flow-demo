@@ -155,33 +155,6 @@ stages:
       - type: liquibase
         command: update
         cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${UPDATE_REPORT}" }
-      #
-      # Test rollbacks
-      # Typically non-production only
-      # https://docs.liquibase.com/commands/rollback/rollback-sql.html
-      #
-      - type: liquibase
-        if: "${LB_TEST_ROLLBACKS} == 'T' && !CONTAINS('${LB_ENVIRONMENT}', 'PROD')"
-        command: rollback-sql
-        cmdArgs: { tag: "${LIQUIBASE_COMMAND_TAG}" }
-      #
-      # Test rollbacks
-      # Typically non-production only
-      # https://docs.liquibase.com/commands/rollback/rollback-by-tag.html
-      #
-      - type: liquibase
-        if: "${LB_TEST_ROLLBACKS} == 'T' && !CONTAINS('${LB_ENVIRONMENT}', 'PROD')"
-        command: rollback
-        cmdArgs: { tag: "${LIQUIBASE_COMMAND_TAG}" }
-      #
-      # Test rollbacks
-      # Typically non-production only
-      # https://docs.liquibase.com/commands/update/update.html
-      #
-      - type: liquibase
-        if: "${LB_TEST_ROLLBACKS} == 'T' && !CONTAINS('${LB_ENVIRONMENT}', 'PROD')"
-        command: update
-        cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${UPDATE_REPORT}" }
 
 ###
 ### Always execute
