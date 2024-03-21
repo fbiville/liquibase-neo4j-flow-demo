@@ -88,10 +88,10 @@ jobs:
 ###
     runs-on:ubuntu-latest
 
+    steps:
 ###
 ### Checkout repository
 ###
-    steps:
     - name: Checking out repository
       uses: actions/checkout@v4
       with:
