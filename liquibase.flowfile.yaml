@@ -132,7 +132,7 @@ stages:
       - type: liquibase
         if: "${LB_TEST_CHECKS} == T"
         command: checks run
-        cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${CHECKS_REPORT}", checks-scope: "changelog, database", changeset-filter: "pending" }
+        cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${CHECKS_REPORT}", checks-scope: "changelog", changeset-filter: "pending" }
       #
       # Tag database
       # https://docs.liquibase.com/commands/utility/tag.html

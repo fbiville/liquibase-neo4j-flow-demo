@@ -9,8 +9,7 @@
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
 
-    <!-- exercise 1 -->
-    <changeSet id="remove-constraints-" author="liquibase-fan"><!-- this is provided -->
+    <changeSet id="remove-constraints-" author="fbiville" labels="jira-1218,release-1.0.0">
         <!-- bonus exercise 5 -->
         <preConditions onFail="HALT">
             <neo4j:cypherCheck expectedResult="1">
@@ -21,37 +20,37 @@
             Movie:['imdbRating'], User:['name'], Movie:['title'], Movie:['year']}, {}, true)
         </neo4j:cypher>
     </changeSet>
-    <changeSet id="add-IMDB-id-constraint-for-movie" author="liquibase-fan"><!-- this is NOT provided -->
+
+    <changeSet id="add-IMDB-id-constraint-for-movie" author="fbiville" labels="jira-1218,release-1.0.0">
         <neo4j:cypher>CREATE CONSTRAINT cst_movie_IMDB_id FOR (m:Movie) REQUIRE (m.imdbId) IS NODE KEY</neo4j:cypher>
     </changeSet>
-    <changeSet id="fix-up-movie-plot" author="liquibase-fan"><!-- this is NOT provided -->
+
+    <changeSet id="fix-up-movie-plot" author="fbiville" labels="jira-1218,release-1.0.0">
         <neo4j:cypher>MATCH (m:Movie) WHERE m.plot IS NULL SET m.plot=m.title</neo4j:cypher>
     </changeSet>
-    <changeSet id="add-movie-plot-existence-constraint" author="liquibase-fan"><!-- this is NOT provided -->
+
+    <changeSet id="add-movie-plot-existence-constraint" author="fbiville" labels="jira-1218,release-1.0.0">
         <neo4j:cypher>CREATE CONSTRAINT cst_movie_plot FOR (m:Movie) REQUIRE (m.plot) IS NOT NULL</neo4j:cypher>
     </changeSet>
 
-    <!-- exercise 2 -->
-    <changeSet id="seed-countries-reference" author="liquibase-fan"><!-- this is NOT provided -->
+    <changeSet id="seed-countries-reference" author="fbiville" labels="jira-1357,release-1.1.0">
         <loadData file="Data/countries.csv" tableName="Country">
             <column name="country" header="name" type="string"/>
         </loadData>
     </changeSet>
 
-    <!-- exercise 3 -->
-    <changeSet id="make-country-names-typed" author="liquibase-fan"><!-- this is provided -->
+    <changeSet id="make-country-names-typed" author="fbiville">
         <neo4j:cypher>CREATE CONSTRAINT country_name_string FOR (country:Country) REQUIRE country.name IS ::STRING
         </neo4j:cypher>
     </changeSet>
 
-    <changeSet id="extract-countries-from-movies" author="liquibase-fan">
-        <!-- this is NOT provided -->
+    <changeSet id="extract-countries-from-movies" author="fbiville" labels="jira-1357,release-1.1.0">
         <neo4j:extractProperty property="countries" fromNodes="(m:Movie) WHERE m.countries IS NOT NULL" nodesNamed="m">
             <neo4j:toNodes withLabel="Country" withProperty="names" merge="true">
                 <neo4j:linkedFromSource withType="IN_COUNTRY" withDirection="OUTGOING"/>
             </neo4j:toNodes>
         </neo4j:extractProperty>
-        <rollback> <!-- this is exercise 4 -->
+        <rollback>
             <neo4j:cypher>
                 MATCH (country:Country)&lt;-[:IN_COUNTRY]-(movie:Movie)
                 SET movie.countries = country.names
@@ -60,21 +59,21 @@
         </rollback>
     </changeSet>
 
-    <changeSet id="explode-and-deduplicate-country-codes" author="liquibase-fan">
-        <neo4j:cypher><!-- this is NOT provided -->
+    <changeSet id="explode-and-deduplicate-country-codes" author="fbiville" labels="jira-1411,release-1.1.0">
+        <neo4j:cypher>
             MATCH (old:Country WHERE old.names IS NOT NULL)
             UNWIND old.names AS rawName
             WITH trim(rawName) AS name <!-- <- acceptable information loss here -->
             WITH DISTINCT name
             MERGE (:Country {name: name})
         </neo4j:cypher>
-        <neo4j:cypher><!-- this is provided -->
+        <neo4j:cypher>
             MATCH (new:Country WHERE new.name IS NOT NULL)
             MATCH (old:Country WHERE old.names IS NOT NULL AND new.name IN old.names)&lt;-[:IN_COUNTRY]-(movie:Movie)
             CREATE (new)&lt;-[:IN_COUNTRY]-(movie)
             DETACH DELETE old
         </neo4j:cypher>
-        <rollback><!-- this is also exercise 4 -->
+        <rollback>
             <neo4j:cypher>
                 MATCH (movie:Movie)-[:IN_COUNTRY]-&gt;(country:Country)
                 WITH movie, collect(country.name) AS names
