@@ -39,7 +39,7 @@
         </loadData>
     </changeSet>
 
-    <changeSet id="make-country-names-typed" author="fbiville" labels="jira-1357,release-1.1.0">
+    <changeSet id="make-country-names-typed" author="fbiville" >
         <neo4j:cypher>CREATE CONSTRAINT country_name_string FOR (country:Country) REQUIRE country.name IS ::STRING
         </neo4j:cypher>
     </changeSet>
