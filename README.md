@@ -2,9 +2,9 @@
   <img src="img/liquibase.png" alt="Liquibase Logo" title="Liquibase Logo" width="324" height="72">
 </p>
 
-This repository contains a Liquibase and Snowflake demo. It is based off our standard demo, minus pre-validate. Liquibase licenses Snowflake by schema.
+This repository contains a Liquibase and Neo4j demo. It is based off our standard demo, minus pre-validate. Liquibase licenses Neo4j by database.
 
-The demo uses Docker.
+The demo uses Docker. The lib files required for Neo4j are stored in the repo and mounted to /liquibase/lib at execution time.
 
 # Pre-Demo Steps
 1. Pull the repo to ensure you have all available updated files<br>
@@ -13,15 +13,20 @@ The demo uses Docker.
      ```
 
 # Demo Steps
+1. **Quality Checks**
+    1. Changeset 5 in the [changelog file](changelog.databricks.sql) contains a DELETE without a WHERE clause.
+    1. Running "Liquibase Workflow" executes the flow. Be sure "Quality Checks" is set to "T" in the dropdown.
+    1. Once the job fails, remove changeset 5 from the changelog and check it back into GitHub (CLI or Editor).<br>
+    ```
+       git pull
+       git commit -am "Remove DELETE"
+       git push
+    ```
 1. **Flows**
-    1. Run "Liquibase Workflow". 8 changes should be applied.
+    1. Rerun "Liquibase Workflow". 4 changes should be applied.
     1. The [flow file](liquibase.flowfile.yaml) works similar to the demo environment (i.e., Validate, Checks Show, Checks Run, etc.).
     1. Update and Drift reports are enabled by default.
     1. To show the reports, pull the repo.
-1. **Targeted Rollback**
-    1. Run "Liquibase Targeted Rollback".
-    1. The default values will rollback changeset 2.
-    1. The history command is run once before the rollback and once after.
 
 # Reset
 Execute the following steps to ready the environment for the next demo.
@@ -30,7 +35,11 @@ Execute the following steps to ready the environment for the next demo.
 ```
 git pull
 ```
-3. Delete logs and reports and update the repository
+3. Add changeset 5 back to changelog.main.xml and update the repository
+```
+--changeset jbennett:5 labels:jira-1359,release-1.0.1
+DELETE FROM BusinessUnit;
+```
 
 ```
 git commit -am "Reset files"

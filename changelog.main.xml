@@ -9,7 +9,6 @@
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
 
-    <include file="Changesets/changelog.ddl.xml"/>
-    <include file="Changesets/changelog.dml.xml"/>
+    <include file="Changesets/changelog.neo4j.xml"/>
 
 </databaseChangeLog>

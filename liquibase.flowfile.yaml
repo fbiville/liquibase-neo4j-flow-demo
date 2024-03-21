@@ -134,16 +134,6 @@ stages:
         command: checks run
         cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${CHECKS_REPORT}", checks-scope: "changelog, database", changeset-filter: "pending" }
       #
-      # Run diff and check for drift
-      # Update referenceURL database type in cmdArgs (e.g., oracle, mssql, snowflake, etc.)
-      # https://docs.liquibase.com/commands/inspection/diff.html
-      #
-      - type: liquibase
-        if: "exists('${SNAPSHOT_FILE}', false) && ${LB_TEST_DRIFT} == 'T'"
-        command: diff
-        globalArgs: { outputfile: "${LB_BASE_DIR}/${DIFF_FILE}" }
-        cmdArgs: { drift-severity: "1", report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${DRIFT_REPORT}", referenceURL: "offline:snowflake?snapshot=${SNAPSHOT_FILE}", format: json }
-      #
       # Tag database
       # https://docs.liquibase.com/commands/utility/tag.html
       #
@@ -192,14 +182,6 @@ stages:
         if: "${LB_TEST_ROLLBACKS} == 'T' && !CONTAINS('${LB_ENVIRONMENT}', 'PROD')"
         command: update
         cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${UPDATE_REPORT}" }
-      #
-      # Create updated snapshot
-      # https://docs.liquibase.com/commands/inspection/snapshot.html
-      #
-      - type: liquibase
-        command: snapshot
-        globalArgs: { outputfile: "${LB_BASE_DIR}/${SNAPSHOT_FILE}" }
-        cmdArgs: { snapshotFormat: "json" }
 
 ###
 ### Always execute

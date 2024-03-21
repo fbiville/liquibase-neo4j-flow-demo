@@ -1,0 +1,87 @@
+###
+### This sample pipeline is intended as a starting point for integration between Liquibase Pro and GitHub pipelines
+### Review and update prior to use
+###
+### Liquibase sales: https://www.liquibase.com/contact
+### Liquibase support: https://support.liquibase.com/knowledge
+### 
+
+###
+### Prior to running the following files must exist in repository:
+###
+### 1. liquibase.flowfile.yaml
+###    Liquibase flow file
+###    https://docs.liquibase.com/commands/flow/flow.html
+###
+###
+### 2. changelog.main.xml
+###    Liquibase changelog file
+###    https://docs.liquibase.com/concepts/changelogs/home.html
+###
+
+###
+### GitHub Actions documentation: https://docs.github.com/en/actions
+###
+
+name: 2. Liquibase Reset
+
+###
+### Pipelines can be triggered manually or via events
+###
+on:
+  workflow_dispatch:
+
+###
+### Set Liquibase environment variables
+###
+env:
+###
+### Liquibase specific
+###
+    LB_BASE_DIR: /liquibase/changelog
+    LB_ENVIRONMENT: DEV
+    LIQUIBASE_COMMAND_CHANGELOG_FILE: changelog.main.xml
+    LIQUIBASE_DBCLHISTORY_ENABLED: true
+    LIQUIBASE_LOG_FILE: /liquibase/changelog/liquibase.dev.log.json
+    LIQUIBASE_SEARCH_PATH: /liquibase/changelog
+    LIQUIBASE_SHOW_BANNER: false
+###
+### These values should be pulled from GitHub secrets
+### Secrets should include LIQUIBASE_COMMAND_URL, LIQUIBASE_COMMAND_USERNAME, LIQUIBASE_COMMAND_PASSWORD, LIQUIBASE_LICENSE_KEY
+###
+    LIQUIBASE_COMMAND_URL: ${{ secrets.LIQUIBASE_DEV_URL }}
+    LIQUIBASE_COMMAND_USERNAME: ${{ secrets.LIQUIBASE_DEV_USER }}
+    LIQUIBASE_COMMAND_PASSWORD: ${{ secrets.LIQUIBASE_DEV_PASSWORD }}
+    LIQUIBASE_LICENSE_KEY: ${{ secrets.LIQUIBASE_PROKEY }}
+
+jobs:
+  liquibase-reset:
+###
+### Update agent location
+###
+    runs-on: ubuntu-latest
+
+    steps:
+###
+### Checkout repository
+###
+    - name: Checking out repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.LIQUIBASE_GITHUB_TOKEN }}
+###
+### Run the Liquibase flowfile
+### Liquibase should be installed where your agents run or invoked via Docker
+###
+    - name: Running Liquibase
+      run: docker run --env LIQUIBASE_SEARCH_PATH --env LIQUIBASE_SHOW_BANNER --env LIQUIBASE_COMMAND_USERNAME --env LIQUIBASE_COMMAND_PASSWORD --env LIQUIBASE_COMMAND_URL --env LIQUIBASE_LICENSE_KEY --env LIQUIBASE_COMMAND_CHANGELOG_FILE --env LIQUIBASE_LOG_FILE --env LB_BASE_DIR --env LB_ENVIRONMENT --rm -v ${{ github.workspace }}:/liquibase/changelog -v ${{ github.workspace }}/lib:/liquibase/lib liquibase/liquibase:latest flow --flow-file=liquibase.reset.yaml
+###
+### Update respository
+###
+    - name: Updating repository
+      run: |
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
+        git add .
+        git commit -m "Update Liquibase repository."
+        git push --force
