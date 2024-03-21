@@ -1,0 +1,82 @@
+###
+### This flowfile is intended to highlight best practices utilizing Liquibase Pro
+### Review and update prior to use
+###
+### Liquibase sales: https://www.liquibase.com/contact
+### Liquibase support: https://support.liquibase.com/knowledge
+###
+
+### 
+### Prior to running the following files must exist in repository:
+###
+### 1. liquibase.flowfile.yaml
+###    This flow file
+###    https://docs.liquibase.com/commands/flow/flow.html
+###
+### 2. liquibase.checks-settings.conf
+###    Liquibase quality checks configuration file
+###    https://docs.liquibase.com/commands/quality-checks/home.html
+###
+### 3. changelog.main.xml
+###    Liquibase changelog file
+###    https://docs.liquibase.com/concepts/changelogs/home.html
+###
+
+###
+### Global variables used in the flowfile
+###
+globalVariables:
+  ###
+  ### These variables are typically set via automation tools (see pipeline examples)
+  ###
+  ### Secrets
+  ### These values should be pulled from a secure vault
+  ###
+  ### LIQUIBASE_COMMAND_URL
+  ### LIQUIBASE_COMMAND_USERNAME
+  ### LIQUIBASE_COMMAND_PASSWORD
+  ### LIQUIBASE_LICENSE_KEY
+  ###
+  ### Files
+  ###
+  SNAPSHOT_FILE: "Snapshot_${LB_ENVIRONMENT}.json"
+  ###
+  ### Operational Reports
+  ### Liquibase Pro creates operational reports for certain commands
+  ### These reports can be copied to a shared location for distribution to users (e.g., S3)
+  ### https://docs.liquibase.com/tools-integrations/observability/operation-reports.html
+  ###
+  ROLLBACK_REPORT: "Rollback_${LB_ENVIRONMENT}.html"
+
+###
+### Stages to execute
+###
+stages:
+  Default:
+    actions:
+      #
+      # Show before
+      #
+      - type: liquibase
+        command: history
+      #
+      # Run targeted rollback
+      #
+      - type: liquibase
+        command: rollback-one-changeset
+        cmdArgs: { report-enabled: "true", report-path: "${LB_BASE_DIR}", report-name: "${ROLLBACK_REPORT}", changeset-author: "${LB_CHANGESET_AUTHOR}", changeset-id: "${LB_CHANGESET_ID}", changeset-path: "${LB_CHANGESET_PATH}", force: "true" }
+      #
+      # Create updated snapshot
+      #
+      - type: liquibase
+        command: snapshot
+        globalArgs: { outputfile: "${LB_BASE_DIR}/${SNAPSHOT_FILE}" }
+        cmdArgs: { snapshotFormat: "json" }
+
+###
+### Always execute
+###
+endStage:
+  actions:
+    - type: liquibase
+      command: history
