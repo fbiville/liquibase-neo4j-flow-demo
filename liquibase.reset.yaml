@@ -39,7 +39,6 @@ globalVariables:
   ###
   ### Files
   ###
-  SNAPSHOT_FILE: "Snapshot_${LB_ENVIRONMENT}.json"
 
 ###
 ### Stages to execute
@@ -56,7 +55,7 @@ stages:
       # Remove files
       #
       - type: shell
-        command: rm -f /liquibase/changelog/liquibase.dev.log.json /liquibase/changelog/Checks_DEV.html /liquibase/changelog/Update_DEV.html
+        command: rm -f /liquibase/changelog/liquibase.neo4j.log.json /liquibase/changelog/Checks_DEV.html /liquibase/changelog/Update_DEV.html
 
 ###
 ### Always execute

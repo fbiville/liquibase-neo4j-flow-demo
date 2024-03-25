@@ -75,16 +75,12 @@ globalVariables:
   ###
   ### Files
   ###
-  DIFF_FILE: "Diff_${LB_ENVIRONMENT}.json"
-  SNAPSHOT_FILE: "Snapshot_${LB_ENVIRONMENT}.json"
-  ###
   ### Operational Reports
   ### Liquibase Pro creates operational reports for certain commands
   ### These reports can be copied to a shared location for distribution to users (e.g., S3)
   ### https://docs.liquibase.com/tools-integrations/observability/operation-reports.html
   ###
   CHECKS_REPORT: "Checks_${LB_ENVIRONMENT}.html"
-  DRIFT_REPORT: "Diff_${LB_ENVIRONMENT}.html"
   UPDATE_REPORT: "Update_${LB_ENVIRONMENT}.html"
   ###
   ### Workflow features

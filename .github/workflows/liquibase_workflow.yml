@@ -58,9 +58,9 @@ env:
     LIQUIBASE_COMMAND_CHECKS_RUN_CHECKS_OUTPUT: issues
     LIQUIBASE_COMMAND_TAG: ${{ github.run_number }}
     LIQUIBASE_DBCLHISTORY_ENABLED: true
-    LIQUIBASE_LOG_FILE: /liquibase/changelog/liquibase.dev.log.json
+    LIQUIBASE_LOG_FILE: /liquibase/changelog/liquibase.neo4j.log.json
     LIQUIBASE_LOG_FORMAT: json_pretty
-    LIQUIBASE_LOG_LEVEL: warning
+    LIQUIBASE_LOG_LEVEL: info
     LIQUIBASE_MIRROR_CONSOLE_MESSAGES_TO_LOG: false
     LIQUIBASE_SEARCH_PATH: /liquibase/changelog
     LIQUIBASE_SHOW_BANNER: false
