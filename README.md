@@ -35,11 +35,7 @@ Execute the following steps to ready the environment for the next demo.
 ```
 git pull
 ```
-3. Add changeset 5 back to changelog.main.xml and update the repository
-```
---changeset jbennett:5 labels:jira-1359,release-1.0.1
-DELETE FROM BusinessUnit;
-```
+3. Remove the label from changeset "make-country-names-typed".
 
 ```
 git commit -am "Reset files"
