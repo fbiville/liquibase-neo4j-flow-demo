@@ -68,22 +68,16 @@ env:
 ### These values should be pulled from GitHub secrets
 ### Secrets should include LIQUIBASE_COMMAND_URL, LIQUIBASE_COMMAND_USERNAME, LIQUIBASE_COMMAND_PASSWORD, LIQUIBASE_LICENSE_KEY
 ###
-    LIQUIBASE_COMMAND_URL: ${{ secrets.LIQUIBASE_DEV_URL }}
-    LIQUIBASE_COMMAND_USERNAME: ${{ secrets.LIQUIBASE_DEV_USER }}
-    LIQUIBASE_COMMAND_PASSWORD: ${{ secrets.LIQUIBASE_DEV_PASSWORD }}
-    LIQUIBASE_LICENSE_KEY: ${{ secrets.LIQUIBASE_LICENSE }}
+    LIQUIBASE_COMMAND_URL: ${{ secrets.NEO4J_URL }}
+    LIQUIBASE_COMMAND_USERNAME: ${{ secrets.NEO4J_USERNAME }}
+    LIQUIBASE_COMMAND_PASSWORD: ${{ secrets.NEO4J_PASSWORD }}
+    LIQUIBASE_LICENSE_KEY: ${{ secrets.LIQUIBASE_PRO_KEY }}
 
 jobs:
   liquibase-workflow:
-###
-### Update agent location
-###
     runs-on: ubuntu-latest
 
     steps:
-###
-### Checkout repository
-###
     - name: Checking out repository
       uses: actions/checkout@v4
       with:
@@ -95,7 +89,7 @@ jobs:
     - name: Running Liquibase
       run: docker run --env LIQUIBASE_SEARCH_PATH --env LIQUIBASE_SHOW_BANNER --env LIQUIBASE_COMMAND_USERNAME --env LIQUIBASE_COMMAND_PASSWORD --env LIQUIBASE_COMMAND_URL --env LIQUIBASE_LICENSE_KEY --env LIQUIBASE_COMMAND_CHANGELOG_FILE --env LIQUIBASE_COMMAND_CHECKS_RUN_CHECKS_OUTPUT --env LIQUIBASE_LOG_FILE --env LIQUIBASE_LOG_FORMAT --env LIQUIBASE_LOG_LEVEL --env LIQUIBASE_MIRROR_CONSOLE_MESSAGES_TO_LOG --env LIQUIBASE_COMMAND_TAG --env LB_BASE_DIR --env LB_ENVIRONMENT --env LB_TEST_CHECKS --rm -v ${{ github.workspace }}:/liquibase/changelog -v ${{ github.workspace }}/lib:/liquibase/lib liquibase/liquibase:latest flow --flow-file=liquibase.flowfile.yaml
 ###
-### Update respository
+### Update repository
 ###
     - name: Updating repository
       if: success() || failure()
