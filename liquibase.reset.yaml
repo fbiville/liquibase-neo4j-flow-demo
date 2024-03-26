@@ -47,20 +47,9 @@ stages:
   Default:
     actions:
       #
-      # Rollback last update
-      #
-      - type: liquibase
-        command: dropAll
-      #
-      # Remove files
+      # Restore last backup
       #
       - type: shell
-        command: rm -f /liquibase/changelog/liquibase.neo4j.log.json /liquibase/changelog/Checks_DEV.html /liquibase/changelog/Update_DEV.html
-
-###
-### Always execute
-###
-endStage:
-  actions:
-    - type: liquibase
-      command: history
+        command: |
+          ACCESS_TOKEN=$(curl --request POST 'https://api.neo4j.io/oauth/token' --user '${NEO4J_AURA_CLIENT_ID}:${NEO4J_AURA_CLIENT_SECRET}' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'grant_type=client_credentials' | jq -r .access_token)
+          curl --request POST --header "Authorization: Bearer ${ACCESS_TOKEN}" --header 'Content-Type: application/json' https://api.neo4j.io/v1/instances/${NEO4J_AURA_INSTANCE_ID}/snapshots/${NEO4J_AURA_SNAPSHOT_ID}/restore
