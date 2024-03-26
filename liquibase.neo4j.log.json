@@ -2659,3 +2659,919 @@
   "message": "Command execution complete",
   "operationStop": "2024-03-26T20:10:41.720Z"
 }
+{
+  "timestamp": "2024-03-26T21:34:15.289Z",
+  "level": "INFO",
+  "class": "liquibase.integration",
+  "thread": "1",
+  "message": "Starting command execution.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "deploymentOutcomeCount": "0",
+  "liquibaseHostName": "06c9efbf1f68",
+  "liquibaseVersion": "4.26.0",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": "06c9efbf1f68"
+}
+{
+  "timestamp": "2024-03-26T21:34:15.526Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "flow validate",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "2024-03-26T21:34:15.526Z",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.331Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:15.539Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Executing command 'connect'",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "flow",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.331Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:18.105Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "connect",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "2024-03-26T21:34:18.105Z",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.544Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "jdbc:neo4j:neo4j+s://b01ad798.databases.neo4j.io",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:18.109Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Executing command 'validate'",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "flow",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.331Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:26.312Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "commandLabelFilter": "",
+  "liquibaseInternalCommand": "validate",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "2024-03-26T21:34:26.312Z",
+  "changelogFile": "changelog.main.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:18.112Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "jdbc:neo4j:neo4j+s://b01ad798.databases.neo4j.io",
+  "liquibaseSystemName": "",
+  "commandContextFilter": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:26.316Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Executing command 'status'",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "flow",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.331Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.862Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "commandLabelFilter": "",
+  "liquibaseInternalCommand": "status",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "2024-03-26T21:34:32.862Z",
+  "changelogFile": "changelog.main.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:26.319Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "jdbc:neo4j:neo4j+s://b01ad798.databases.neo4j.io",
+  "liquibaseSystemName": "",
+  "commandContextFilter": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.899Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Executing command 'checks show'",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "flow",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.331Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.926Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Check settings configuration file located at 'file:///liquibase/changelog/liquibase.checks-settings.conf'.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks show",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.902Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.928Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Check settings configuration file contents read from 'file:///liquibase/changelog/liquibase.checks-settings.conf'.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks show",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.902Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.930Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "The contents of this settings file are not versioned",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks show",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.902Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.993Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks show",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "2024-03-26T21:34:32.993Z",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.902Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:32.996Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Executing command 'checks run'",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "flow",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:15.331Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:33.065Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Check settings configuration file located at 'file:///liquibase/changelog/liquibase.checks-settings.conf'.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "Changesets/changelog.neo4j.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:33.067Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Check settings configuration file contents read from 'file:///liquibase/changelog/liquibase.checks-settings.conf'.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "Changesets/changelog.neo4j.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:33.068Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "The contents of this settings file are not versioned",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "Changesets/changelog.neo4j.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:34.845Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "The 'changeset-filter' property is set to 'pending', so only undeployed changesets are inspected by Quality Checks. If you want to inspect both deployed and undeployed changesets, set to 'all'. Learn more at http://docs.liquibase.com/quality-checks.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "Changesets/changelog.neo4j.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:34.875Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Generated JSON report",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "Changesets/changelog.neo4j.xml",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "qualityChecks": {
+    "changelogChecks": [
+      {
+        "executedChecks": [
+          {
+            "customizations": [
+              ],
+            "description": "This check enforces the Liquibase recommendation that labels be assigned to each changeset to provide better deployment control and to enhance traceability of efforts across changesets.",
+            "checkName": "Changesets Must Have a Label Assigned",
+            "enabled": true,
+            "checkShortName": "ChangesetLabelCheck",
+            "severity": "1"
+          }
+        ]
+        ,
+        "hasProLicense": true,
+        "changesetsValidated": [
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "remove-constraints"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "add-IMDB-id-constraint-for-movie"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "fix-up-movie-plot"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "add-movie-plot-existence-constraint"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "seed-countries-reference"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "extract-countries-from-movies"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "make-country-name-typed"
+          },
+          {
+            "author": "fbiville",
+            "filepath": "Changesets/changelog.neo4j.xml",
+            "id": "explode-and-normalize-country-names"
+          }
+        ]
+        ,
+        "productVersion": "4.26.0",
+        "username": "liquibase",
+        "issueCount": 1,
+        "executionDate": "2024-03-26T21:34:34.872921122Z",
+        "unlicensedChangesetsCount": 0,
+        "unlicensedChangesets": [
+          ],
+        "unrecognizedChecks": [
+          ],
+        "executedChecksCount": 1,
+        "issues": [
+          {
+            "changesetAuthor": "fbiville",
+            "changesetFilePath": "Changesets/changelog.neo4j.xml",
+            "changesetId": "make-country-name-typed",
+            "checkMessage": "Liquibase recommends that labels be assigned to each changeset to provide better deployment control and to enhance traceability of efforts across changesets.  Review the changeset indicated and consider adding a label to it.",
+            "checkName": "Changesets Must Have a Label Assigned",
+            "checkReturnCode": 1,
+            "checkSeverity": "MINOR",
+            "checkShortName": "ChangesetLabelCheck"
+          }
+        ]
+        ,
+        "changesetsValidatedCount": 8,
+        "changelogFilePath": "changelog.main.xml",
+        "integration": "cli",
+        "unparseableChangesets": [
+          ],
+        "unparseableChangesetsCount": 0,
+        "checksSettingsFile": "null",
+        "returnCode": 1
+      }
+    ]
+    ,
+    "databaseChecks": [
+      ]
+  },
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:35.192Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Report file '/liquibase/changelog/Checks_DEV.html' was created",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:35.193Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Logging exception.",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "exceptionDetails": {
+    "exception": "liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat liquibase.command.CommandResultsBuilder.commandFailed(CommandResultsBuilder.java:70)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.doRun(ChecksRunCommandStep.java:500)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.lambda$run$8(ChecksRunCommandStep.java:320)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.run(ChecksRunCommandStep.java:320)\n\tat liquibase.command.CommandScope.execute(CommandScope.java:217)\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.lambda$execute$0(LiquibaseCommandAction.java:137)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.execute(LiquibaseCommandAction.java:136)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.lambda$runAction$1(FlowCommandStep.java:338)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.runAction(FlowCommandStep.java:332)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.lambda$executeStage$0(FlowCommandStep.java:310)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.executeStage(FlowCommandStep.java:280)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.run(FlowCommandStep.java:133)\n\tat liquibase.command.CommandScope.execute(CommandScope.java:217)\n\tat liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:55)\n\tat liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:24)\n\tat picocli.CommandLine.executeUserObject(CommandLine.java:2041)\n\tat picocli.CommandLine.access$1500(CommandLine.java:148)\n\tat picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2453)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2415)\n\tat picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)\n\tat picocli.CommandLine$RunLast.execute(CommandLine.java:2417)\n\tat picocli.CommandLine.execute(CommandLine.java:2170)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:390)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:171)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:365)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:171)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:362)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:102)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\n\tat java.base/java.lang.reflect.Method.invoke(Unknown Source)\n\tat liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:116)\n",
+    "primaryException": "CommandFailedException",
+    "primaryExceptionReason": "Checks run command exited with error code of 1",
+    "primaryExceptionSource": "4.26.0"
+  },
+  "liquibaseVersion": "",
+  "operationStop": "",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:35.196Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetOutcome": "NOOP",
+  "liquibaseSystemUser": "liquibase",
+  "deploymentOutcome": "NOOP",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "checks run",
+  "deploymentOutcomeCount": "0",
+  "liquibaseVersion": "",
+  "operationStop": "2024-03-26T21:34:35.196Z",
+  "changelogFile": "",
+  "changesetsUpdated": {
+    "changeset": "null",
+    "changesetCount": 0
+  },
+  "operationStart": "2024-03-26T21:34:32.999Z",
+  "liquibaseCommandName": "flow",
+  "deploymentId": "",
+  "rowsAffected": "0",
+  "liquibaseCatalogName": "",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "liquibaseTargetUrl": "",
+  "liquibaseSystemName": ""
+}
+{
+  "timestamp": "2024-03-26T21:34:35.200Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Flow command complete",
+  "flowFileRoot": {
+    "flowFilesNested": {
+      "file": {
+        },
+      "fileCount": 0
+    },
+    "globalVariables": {
+      "CHECKS_REPORT": "Checks_${LB_ENVIRONMENT}.html",
+      "UPDATE_REPORT": "Update_${LB_ENVIRONMENT}.html",
+      "LB_SHOW_UPDATE_SQL": "F"
+    },
+    "includedFiles": "null",
+    "name": "liquibase.flowfile.yaml",
+    "path": "/liquibase/changelog/liquibase.flowfile.yaml",
+    "stages": {
+      "stage": {
+        "1": {
+          "actions": {
+            "action": {
+              "1": {
+                "command": "connect",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "2": {
+                "command": "validate",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "3": {
+                "command": "status",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "4": {
+                "command": "checks show",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "5": {
+                "command": "checks run",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "6": {
+                "command": "tag",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "7": {
+                "command": "update-sql",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              },
+              "8": {
+                "command": "update",
+                "type": "liquibase",
+                "userMetadata": {
+                  }
+              }
+            }
+          },
+          "name": "Default",
+          "stageVars": {
+            },
+          "userMetadata": {
+            }
+        },
+        "2": {
+          "actions": {
+            "action": {
+              }
+          },
+          "name": "endStage",
+          "stageVars": "null",
+          "userMetadata": "null"
+        }
+      }
+    },
+    "userMetadata": {
+      }
+  },
+  "flowFileFailedStage": "Default",
+  "flowFileFailedMessage": "liquibase.exception.CommandExecutionException: liquibase.exception.CommandExecutionException: liquibase.command.CommandFailedException: Checks run command exited with error code of 1",
+  "flowStop": "2024-03-26T21:34:35.198Z",
+  "flowStart": "2024-03-26T21:34:15.530Z",
+  "flowFileOutcome": "Fail"
+}
+{
+  "timestamp": "2024-03-26T21:34:35.206Z",
+  "level": "WARNING",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Exception occurred",
+  "exception": "\nliquibase.exception.CommandExecutionException: liquibase.exception.CommandExecutionException: liquibase.exception.CommandExecutionException: liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat com.datical.liquibase.ext.command.FlowCommandStep.runAction(FlowCommandStep.java:342)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.lambda$executeStage$0(FlowCommandStep.java:310)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.executeStage(FlowCommandStep.java:280)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.run(FlowCommandStep.java:133)\n\tat liquibase.command.CommandScope.execute(CommandScope.java:217)\n\tat liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:55)\n\tat liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:24)\n\tat picocli.CommandLine.executeUserObject(CommandLine.java:2041)\n\tat picocli.CommandLine.access$1500(CommandLine.java:148)\n\tat picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2453)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2415)\n\tat picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)\n\tat picocli.CommandLine$RunLast.execute(CommandLine.java:2417)\n\tat picocli.CommandLine.execute(CommandLine.java:2170)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:390)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:171)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:365)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:171)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:362)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:102)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\n\tat java.base/java.lang.reflect.Method.invoke(Unknown Source)\n\tat liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:116)\nCaused by: liquibase.exception.CommandExecutionException: liquibase.exception.CommandExecutionException: liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.execute(LiquibaseCommandAction.java:145)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.lambda$runAction$1(FlowCommandStep.java:338)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.runAction(FlowCommandStep.java:332)\n\t... 31 more\nCaused by: liquibase.exception.CommandExecutionException: liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat liquibase.command.CommandScope.execute(CommandScope.java:253)\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.lambda$execute$0(LiquibaseCommandAction.java:137)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.execute(LiquibaseCommandAction.java:136)\n\t... 37 more\nCaused by: liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat liquibase.command.CommandResultsBuilder.commandFailed(CommandResultsBuilder.java:70)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.doRun(ChecksRunCommandStep.java:500)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.lambda$run$8(ChecksRunCommandStep.java:320)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.run(ChecksRunCommandStep.java:320)\n\tat liquibase.command.CommandScope.execute(CommandScope.java:217)\n\t... 43 more\n",
+  "flowFileFailedStage": "Default"
+}
+{
+  "timestamp": "2024-03-26T21:34:35.208Z",
+  "level": "INFO",
+  "class": "liquibase",
+  "thread": "1",
+  "message": "Executing command 'history'",
+  "flowFileFailedStage": "Default",
+  "liquibaseCommandName": "flow"
+}
+{
+  "timestamp": "2024-03-26T21:34:35.225Z",
+  "level": "INFO",
+  "class": "liquibase.license",
+  "thread": "1",
+  "message": "Successfully installed license from Base64 string starting with 'ABwwGgQUkb' (property liquibaseProLicenseKey).\n",
+  "flowFileFailedStage": "Default",
+  "liquibaseInternalCommand": "history",
+  "liquibaseCommandName": "history",
+  "operationStart": "2024-03-26T21:34:35.210Z"
+}
+{
+  "timestamp": "2024-03-26T21:34:36.995Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "flowFileFailedStage": "Default",
+  "operationStop": "2024-03-26T21:34:36.995Z",
+  "liquibaseSchemaName": "",
+  "liquibaseInternalCommand": "internalHistory",
+  "liquibaseCommandName": "history",
+  "operationStart": "2024-03-26T21:34:36.582Z",
+  "liquibaseCatalogName": "",
+  "liquibaseTargetUrl": "jdbc:neo4j:neo4j+s://b01ad798.databases.neo4j.io"
+}
+{
+  "timestamp": "2024-03-26T21:34:37.298Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "operationStop": "2024-03-26T21:34:37.298Z"
+}
+{
+  "timestamp": "2024-03-26T21:34:37.299Z",
+  "level": "INFO",
+  "class": "liquibase.command",
+  "thread": "1",
+  "message": "Command execution complete",
+  "changesetId": "",
+  "changesetAuthor": "",
+  "operationStop": "2024-03-26T21:34:37.299Z"
+}
+{
+  "timestamp": "2024-03-26T21:34:37.300Z",
+  "level": "SEVERE",
+  "class": "liquibase.integration",
+  "thread": "1",
+  "message": "Checks run command exited with error code of 1",
+  "exception": "\nliquibase.exception.CommandExecutionException: liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat liquibase.command.CommandScope.execute(CommandScope.java:253)\n\tat liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:55)\n\tat liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:24)\n\tat picocli.CommandLine.executeUserObject(CommandLine.java:2041)\n\tat picocli.CommandLine.access$1500(CommandLine.java:148)\n\tat picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2453)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2415)\n\tat picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)\n\tat picocli.CommandLine$RunLast.execute(CommandLine.java:2417)\n\tat picocli.CommandLine.execute(CommandLine.java:2170)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:390)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:171)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:365)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:171)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:362)\n\tat liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:102)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\n\tat java.base/java.lang.reflect.Method.invoke(Unknown Source)\n\tat liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:116)\nCaused by: liquibase.command.CommandFailedException: Checks run command exited with error code of 1\n\tat liquibase.command.CommandResultsBuilder.commandFailed(CommandResultsBuilder.java:70)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.doRun(ChecksRunCommandStep.java:500)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.lambda$run$8(ChecksRunCommandStep.java:320)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.checks.ChecksRunCommandStep.run(ChecksRunCommandStep.java:320)\n\tat liquibase.command.CommandScope.execute(CommandScope.java:217)\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.lambda$execute$0(LiquibaseCommandAction.java:137)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.flow.action.LiquibaseCommandAction.execute(LiquibaseCommandAction.java:136)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.lambda$runAction$1(FlowCommandStep.java:338)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.runAction(FlowCommandStep.java:332)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.lambda$executeStage$0(FlowCommandStep.java:310)\n\tat liquibase.Scope.lambda$child$0(Scope.java:186)\n\tat liquibase.Scope.child(Scope.java:195)\n\tat liquibase.Scope.child(Scope.java:185)\n\tat liquibase.Scope.child(Scope.java:164)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.executeStage(FlowCommandStep.java:280)\n\tat com.datical.liquibase.ext.command.FlowCommandStep.run(FlowCommandStep.java:133)\n\tat liquibase.command.CommandScope.execute(CommandScope.java:217)\n\t... 23 more\n",
+  "changesetId": "",
+  "changesetAuthor": ""
+}
