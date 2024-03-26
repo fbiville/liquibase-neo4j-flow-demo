@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
-    xmlns:neo4j="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:neo4j="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
-        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="remove-constraints-" author="fbiville" labels="jira-1218,release-1.0.0">
-        <!-- bonus exercise 5 -->
         <preConditions onFail="HALT">
             <neo4j:cypherCheck expectedResult="1">
                 SHOW PROCEDURES YIELD name WHERE name = "apoc.schema.assert" RETURN count(name)
@@ -39,7 +36,7 @@
         </loadData>
     </changeSet>
 
-    <changeSet id="make-country-names-typed" author="fbiville" >
+    <changeSet id="make-country-names-typed" author="fbiville">
         <neo4j:cypher>CREATE CONSTRAINT country_name_string FOR (country:Country) REQUIRE country.name IS ::STRING
         </neo4j:cypher>
     </changeSet>
