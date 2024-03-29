@@ -51,7 +51,7 @@
         </rollback>
     </changeSet>
 
-    <changeSet id="make-country-name-typed" author="fbiville">
+    <changeSet id="make-country-name-typed" author="fbiville" labels="jira-1411,release-1.1.0">
         <neo4j:cypher>CREATE CONSTRAINT country_name_string FOR (country:Country) REQUIRE country.country IS ::STRING
         </neo4j:cypher>
     </changeSet>
